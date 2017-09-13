@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='ss.css')}}">
+    </head>
+    <body>
+        {% include "headerout.html" %}
+        <div class="container">
+            <h2>New Item</h2>
+            <form action="{{url_for('newItem')}}" method="POST">
+                <label>Title</label><br>
+                <input type="text" name="name"><br><br>
+                <label>Description</label><br>
+                <input type="text" name="description"><br><br>
+                <label>Category</label><br>
+                <select name="category">
+                    <option value="Soccer" selected>Soccer</option>
+                    <option value="Basketball">Basketball</option>
+                    <option value="Baseball">Baseball</option>
+                    <option value="Frisebee">Frisebee</option>
+                    <option value="Snowboarding">Snowboarding</option>
+                    <option value="Rock Climbing">Rock Climbing</option>
+                    <option value="Foosball">Foosball</option>
+                    <option value="Skating">Skating</option>
+                    <option value="Hockey">Hockey</option>
+                </select><br><br>
+                <input type="submit" value="Create">
+            </form>
+        </div>
+    </body>
+</html>

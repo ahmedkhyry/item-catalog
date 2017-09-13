@@ -1,0 +1,44 @@
+/* Start Main rules */
+body {
+    background: #D3D3D3
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 40px;
+    background-color: seagreen
+}
+
+/* End Main rules */
+a {
+    text-decoration: none;
+}
+.containerheader {
+    background-color: lightskyblue;
+}
+
+
+.hh {
+    display: inline-block;
+}
+
+.login {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px;
+}
+
+.flo {
+    float: right;
+}
+
+.part {
+    float: left;
+    width: 50%;
+}

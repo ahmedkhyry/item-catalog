@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='ss.css')}}">
+    </head>
+    <body>
+        {% include "headerout.html" %}
+        <div class="container">
+            <h2>{{item.name}}</h2>
+            <span>Description: {{item.description}}</span><br>
+            <a href="{{url_for('editItem', itemName=item.name)}}">Edit</a>
+            <a href="{{url_for('deleteItem', itemName=item.name)}}">Delete</a>
+        </div>
+    </body>
+</html>

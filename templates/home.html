@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='ss.css')}}">
+    </head>
+    <body>
+        {% include "headerout.html" %}
+        <div class="container">
+            <div class="part">
+                <h2>Categories</h2>
+                {% for i in categories %}
+                    <a href="{{url_for('showCategoryItem', categoryName=i.name)}}"><p>{{i.name}}</p></a>
+                {% endfor %}
+            </div>
+            <div class="part">
+                <a href="{{url_for('newItem')}}">Add Item</a>
+                <h2>Latest Items</h2>
+                {% for e in items %}
+                    <a href="{{url_for('showItemDescription', categoryName=e.category, itemName=e.name)}}"><p><p>{{e.name}}<span>({{e.category}})</span></p></a>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>
